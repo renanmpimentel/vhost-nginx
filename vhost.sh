@@ -70,11 +70,7 @@ echo "server {
 	#location ~ /\.ht {
 	#	deny all;
 	#}
-}" > /etc/nginx/sites-available/$server
-
-
-echo "Active VHOST $server"
-ln -s /etc/nginx/sites-available/$server /etc/nginx/sites-enabled/$server
+}" > /etc/nginx/conf.d/$server.conf
 
 echo "Update hosts"
 echo "127.0.1.1 $server www.$server" >> /etc/hosts
